@@ -1,0 +1,7 @@
+{
+    "dateLibrary": "java8",
+    "java8": true,
+    "modelPackage": "com.sample.model",
+    "apiPackage": "com.sample.web",
+    "invokerPackage": "com.sample"
+}

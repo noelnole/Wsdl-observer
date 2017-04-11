@@ -1,0 +1,6 @@
+logging:
+  level:
+    com.sample: DEBUG
+    org:
+      springframework:
+        ws: DEBUG

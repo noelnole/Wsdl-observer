@@ -1,0 +1,67 @@
+swagger: '2.0'
+info:
+  description: Sample api design
+  title: Sample microservice
+  version: 1.0.0-SNAPSHOT
+schemes:
+  - http
+  - https
+basePath: /api
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /weathers:
+    get:
+      summary: Get the weathers.
+      description: Dummy to endpoint that return a object
+      tags:
+        - Region
+      responses:
+        '200':
+          description: The confirmation code.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/quote'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+definitions:
+  Quote:
+    type: object
+    properties:
+      name:
+        type: string
+        description: The Quote object.
+  Error:
+    type: object
+    properties:
+      error:
+        type: string
+        example: Bad Request
+        description: Description of the status
+      exception:
+        type: string
+        example: com.sample.exceptions.WeatherException
+        description: Name of the internal exception
+      message:
+        type: string
+        example: Something is not right
+        description: Description of the exception
+      path:
+        type: string
+        example: /v1/weathers
+        description: Path of the problematic service call
+      status:
+        type: integer
+        format: int32
+        example: 400
+        description: HTTP status code
+      timestamp:
+        type: integer
+        format: int64
+        example: 1482253855188
+        description: Timestamp of the error

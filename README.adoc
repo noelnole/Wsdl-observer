@@ -1,0 +1,21 @@
+= Spring Boot + Observer + WSDL
+
+== Intro
+
+ This project was born with the aim of getting and aproach of use Spring Boot with WSDL and RxJava.
+
+ This is a dummy sample just to know how works with wsdl and orika mapper and and an aproach of RxJava in the service layer.
+
+== Build the microservice
+
+You can build the microservice with gradle and run it as
+
+---
+java -jar *.
+---
+
+
+or run in your IDE
+
+
+

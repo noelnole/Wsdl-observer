@@ -2,9 +2,11 @@
 
 == Intro
 
- This project was born with the aim of getting and aproach of use Spring Boot with WSDL and RxJava.
+ This project was born with the aim of getting and aproach of use Spring Boot with WSDL and
+ RxJava.
 
- This is a dummy sample just to know how works with wsdl and orika mapper and and an aproach of RxJava in the service layer.
+ This is a dummy sample just to know how works with wsdl and orika mapper and and an aproach
+ of RxJava in the service layer, while all information is caching with Redis.
 
 == Build the microservice
 

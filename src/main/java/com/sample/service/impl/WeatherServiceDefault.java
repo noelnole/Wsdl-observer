@@ -8,6 +8,8 @@ import io.reactivex.Observable;
 import lombok.RequiredArgsConstructor;
 import ma.glasnost.orika.MapperFacade;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheConfig;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import com.sample.service.WeatherService;
 
@@ -21,6 +23,7 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
+@CacheConfig(cacheNames = "quote")
 public class WeatherServiceDefault implements WeatherService {
 
     @Autowired
@@ -28,7 +31,7 @@ public class WeatherServiceDefault implements WeatherService {
 
 
 
-
+    @Cacheable
     @Override
     public Optional<Quote> getQuote(String ticker) {
         //I create an observable that emits a particular item

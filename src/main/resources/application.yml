@@ -4,3 +4,8 @@ logging:
     org:
       springframework:
         ws: DEBUG
+spring:
+  redis:
+    host: localhost
+    password: secret
+    port: 6379

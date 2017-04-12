@@ -1,4 +1,4 @@
-package com.bns.baas.location.web;
+package com.sample.web;
 
 import com.sample.model.Quote;
 import com.sample.service.WeatherService;
